@@ -22,7 +22,7 @@ const AdminProducts = () => {
 
   const handleClick = async (product) => {
     const response = await fetch(`http://localhost:8080/products/delete/${product._id}`, {
-        method: 'DELETE',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${localStorage.getItem('token')}`
